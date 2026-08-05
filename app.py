@@ -1,7 +1,9 @@
+
 import streamlit as st
 import joblib
 import pandas as pd
 import numpy as np
+
 
 # Page configuration
 st.set_page_config(page_title="Crop Yield Predictor", layout="centered")
@@ -13,7 +15,7 @@ st.markdown("---")
 @st.cache_resource
 def load_model():
     # This loaded file contains your complete pipeline: OneHotEncoder + LinearRegression
-    return joblib.load('crop_yield_model.pkl')
+    return joblib.load('linear_regression_pipeline.joblib')
 
 model = load_model()
 
